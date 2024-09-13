@@ -1,0 +1,11 @@
+learn cpp syntax
+learn cpp libraries
+learn cpp codebase
+must have classes
+must have namespace
+learn cpp cmake
+
+/*
+ improved version of file locker project - unseen bytes
+ recurse through current directory to encrypt only sensitive files aka has the name "password" (for speed and performance)
+*/
