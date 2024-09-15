@@ -1,5 +1,7 @@
 #include <iostream>
 using namespace std;
+#include "encrypt.cpp"
+using namespace encryption;
 
 int main() {
     // cli tool - future implementation
@@ -11,17 +13,16 @@ int main() {
     cout << "1) encrypts all sensitive files\n";
     cout << "2) decrypts all encrypted files\n";
     cout << "input? ";
-    int x;
-    cin >> x;
+    int mode;
+    cin >> mode;
 
-    if (x == 1){
-        // encrypt
-        cout << "encryption selected!";
-    }else if (x == 2){
-        // decrypt
-        cout << "decryption selected!";
+    if (mode == 1){
+        cout << "encryption selected\n";
+    }else if (mode == 2){
+        cout << "decryption selected\n";
     }else{
-        //invalid
+        cout << "invalid selection\n";
     }
 
+    cout << "end of program, thanks for using unseen bytes!";
 }
