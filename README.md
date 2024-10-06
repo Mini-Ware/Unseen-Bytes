@@ -11,4 +11,7 @@ Proof of concept encryption tool built using C++
   - Safely wipe all files in a directory (future implementaton)
 
 # How to use
-Not completed yet
+- Download or compile the binary
+- Run the programme
+- During encryption, files will be saved as ub extension
+- During decryption, files will be renamed to its original

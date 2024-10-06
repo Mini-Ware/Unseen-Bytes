@@ -7,15 +7,14 @@ namespace encryption {
         
     }
 
-    std::string EncryptionAlgorithm::encrypt(const std::string& plaintext) {
-        // gather files named password
-        // encrypt using aes
+    std::string EncryptionAlgorithm::encrypt(const std::string& filename) {
+        cout << "encrypting file\n";
+        // encrypt, change extension to ub
     }
 
-    std::string EncryptionAlgorithm::decrypt(const std::string& ciphertext) {
-        // gather encrypted files
-        // decrypt using aes
-        // check if correct
+    std::string EncryptionAlgorithm::decrypt(const std::string& filename) {
+        cout << "decrypting file\n";
+        // decrypt, revert extension
     }
 
 }

@@ -1,0 +1,10 @@
+breakdown the work
+
+list down files
+read a file
+
+encrypt a file
+save a file
+
+use classes
+use cmake

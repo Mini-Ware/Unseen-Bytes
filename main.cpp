@@ -1,28 +1,22 @@
+#include <filesystem>
 #include <iostream>
-using namespace std;
+#include <string>
+#include <sys/stat.h>
 #include "encrypt.cpp"
+
+using namespace std;
 using namespace encryption;
 
 int main() {
-    // cli tool - future implementation
-    // cout << "--encrypt <key>    encrypts all sensitive files";
-    // cout << "--decrypt <key>    decrypts all encrypted files";
+    char directory[] = "";
+    cout << "directory? ";
+    cin >> directory;
+    
+    char key[] = "";
+    cout << "key? ";
+    cin >> key;
 
-    // default, interactive
-    cout << "unseen bytes\n";
-    cout << "1) encrypts all sensitive files\n";
-    cout << "2) decrypts all encrypted files\n";
-    cout << "input? ";
-    int mode;
-    cin >> mode;
-
-    if (mode == 1){
-        cout << "encryption selected\n";
-    }else if (mode == 2){
-        cout << "decryption selected\n";
-    }else{
-        cout << "invalid selection\n";
-    }
-
-    cout << "end of program, thanks for using unseen bytes!";
+    // loop files and apply change based on mode
+        // if not ub extension, set mode to encrypt
+        // else set mode to decrypt
 }
