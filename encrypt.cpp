@@ -8,13 +8,15 @@ namespace encryption {
     }
 
     std::string EncryptionAlgorithm::encrypt(const std::string& filename) {
-        cout << "encrypting file\n";
-        // encrypt, change extension to ub
+        // cout << "encrypting file\n";
+        // change extension to ub
+        // encrypt content
     }
 
     std::string EncryptionAlgorithm::decrypt(const std::string& filename) {
-        cout << "decrypting file\n";
-        // decrypt, revert extension
+        // cout << "decrypting file\n";
+        // revert extension
+        // decrypt content
     }
 
 }

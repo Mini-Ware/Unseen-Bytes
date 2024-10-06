@@ -1,22 +1,39 @@
-#include <filesystem>
 #include <iostream>
-#include <string>
+#include <filesystem>
+#include <string.h>
 #include <sys/stat.h>
 #include "encrypt.cpp"
 
 using namespace std;
-using namespace encryption;
+namespace fs = std::filesystem;
 
 int main() {
-    char directory[] = "";
+    string directory;
     cout << "directory? ";
     cin >> directory;
+    cout << "target directory - "+directory+"\n";
     
-    char key[] = "";
+    string key;
     cout << "key? ";
     cin >> key;
+    cout << "configured key - "+key+"\n";
 
+    // get list of files
+    cout << "\nfetching files in directory...\n";
+    struct stat sb;
     // loop files and apply change based on mode
+    for (const auto& entry : fs::directory_iterator(directory)) {
+ 
+        // Converting the path to const char * in the subsequent lines
+        std::filesystem::path outfilename = entry.path();
+        std::string outfilename_str = outfilename.string();
+        const char* path = outfilename_str.c_str();
+ 
+        // Testing whether the path points to a non-directory or not If it does, displays path
+        if (stat(path, &sb) == 0 && !(sb.st_mode & S_IFDIR))
+            std ::cout << path << std::endl;
+        
         // if not ub extension, set mode to encrypt
         // else set mode to decrypt
+    }
 }

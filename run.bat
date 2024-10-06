@@ -1,1 +1,1 @@
-g++ main.cpp && a.exe
+g++ -std=c++17 main.cpp -lstdc++fs && a.exe
