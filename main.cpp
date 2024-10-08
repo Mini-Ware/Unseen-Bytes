@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdio.h>
 #include <filesystem>
 #include <string.h>
 #include <sys/stat.h>
@@ -32,8 +33,14 @@ int main() {
         // Testing whether the path points to a non-directory or not If it does, displays path
         if (stat(path, &sb) == 0 && !(sb.st_mode & S_IFDIR))
             std ::cout << path << std::endl;
+
+            string ext = outfilename.extension().string();
+            cout << "Extension is "+ext+"\n";
         
-        // if not ub extension, set mode to encrypt
-        // else set mode to decrypt
+            // if not ub extension, set mode to encrypt
+            if (strcmp(ext,".ub") == 0){
+            }else{
+                // else set mode to decrypt
+            }
     }
 }
