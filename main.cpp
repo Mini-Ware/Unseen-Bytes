@@ -6,18 +6,20 @@
 #include "encrypt.cpp"
 
 using namespace std;
+using namespace encryption;
 namespace fs = std::filesystem;
 
 int main() {
     string directory;
-    cout << "directory? ";
+    cout << "Folder? ";
     cin >> directory;
-    cout << "target directory - "+directory+"\n";
+    cout << "Folder selected - "+directory+"\n";
     
     string key;
-    cout << "key? ";
+    cout << "Key? ";
     cin >> key;
-    cout << "configured key - "+key+"\n";
+    cout << "Key selected - "+key+"\n";
+    EncryptionAlgorithm encryptor(key);
 
     // get list of files
     cout << "\nfetching files in directory...\n";
@@ -38,9 +40,11 @@ int main() {
             cout << "Extension is "+ext+"\n";
         
             // if not ub extension, set mode to encrypt
-            if (strcmp(ext,".ub") == 0){
+            if (strcmp(ext.c_str(),".ub")){
+                encryptor.encrypt(outfilename_str.c_str());
             }else{
                 // else set mode to decrypt
+                encryptor.decrypt(outfilename_str.c_str());
             }
     }
 }

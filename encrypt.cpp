@@ -1,6 +1,7 @@
 #include "encrypt.hpp"
 #include <string>
 
+using namespace std;
 namespace encryption {
 
     EncryptionAlgorithm::EncryptionAlgorithm(const std::string& key) {
@@ -11,6 +12,7 @@ namespace encryption {
         // cout << "encrypting file\n";
         // change extension to ub
         // encrypt content
+        cout << "Encryption is selected\n";
         return 0;
     }
 
@@ -18,6 +20,7 @@ namespace encryption {
         // cout << "decrypting file\n";
         // revert extension
         // decrypt content
+        cout << "Decryption is selected\n";
         return 0;
     }
 
