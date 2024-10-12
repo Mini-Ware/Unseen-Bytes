@@ -41,10 +41,10 @@ int main() {
         
             // if not ub extension, set mode to encrypt
             if (strcmp(ext.c_str(),".ub")){
-                encryptor.encrypt(outfilename_str);
+                encryptor.encrypt(outfilename_str.c_str());
             }else{
                 // else set mode to decrypt
-                encryptor.decrypt(outfilename_str);
+                encryptor.decrypt(outfilename_str.c_str());
             }
             cout << "\n";
     }

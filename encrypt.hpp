@@ -10,6 +10,7 @@ namespace encryption {
             std::string encrypt(const std::string& filename);
             std::string decrypt(const std::string& filename);
         private:
+            std::string encryptionKey;
     };
 }
 
